@@ -1,0 +1,7 @@
+Jest to pomysł na chat - konferencję dla większej grupy osób, pomysł zrodził się na skutek problemów z konferencjami GG u użytkowników korzystających z różnych komunikatorów współpracujących z GG.
+Serwer przechwuje archiwum rozmów oraz listę użytkowników w MySQLowej bazie danych stosując technologię Hibernate.
+
+
+Projekt na chwilę obecną jest rozwijany.
+
+Do mnie należy część serwerowa projektu.

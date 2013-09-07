@@ -1,0 +1,24 @@
+1. keySLL zawiera certyfikat do polaczen SSL dla servera i klienta, hasło do 
+	niego konfa1 ale jeszcze nie umiem go importowac wewnatrz jara, wiec 
+	polaczenie na razie szyfrowane nie jest
+
+2. build.xml i ant -> buduje cay projekt to jarow w folderze build - bajeranckie;]
+	ale na razie jest wyłączony, bo muli, jak coś, to Project>Properties>Builders i fajka
+
+3. Serwer raczej obsugujemy przez obiekt Service
+	- uruchamiamy : java -jar Service.jar start //trwa kilka sekund
+	- zatrzymujemy: java -jar Service.jar stop  //wylaczanie trwa do 10s
+	- podlaczamy sie do real-time logow : java -jar Service.jar logs
+	- mozna jeszcze pobrac aktualny stan serwera, ale jeszcze nie dziala dokladnie
+4. Server musi miec MySql'owa baze danych o nazwie konfadb 
+	z uzytkownikiem admin i haslem admin123, to jesli uruchamiamy na localhoscie, 
+	na serwerze w Ameryce poludniowej jest to zrobione;]	
+	
+5. Klienta odpalamy java -jar KLient.jar, na razie logi sa na std.out, 
+	wiec konsola sie nie zwalnia
+	jesli server jest uruchomiony na localhoscie uruchamiamy z argumentem 
+	"localhost" || "local" || "loc" (widac w konfa.client.Starter).
+
+6. Polaczenie klient<->serwer i wymiana obiektow Message zostala wycieta i wpakowana
+	do pakietu konfa.communication.protocol, z ktorego klasy sa ladowane do obu
+	aplikacji
